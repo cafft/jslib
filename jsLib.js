@@ -1,5 +1,6 @@
 var geTime = () => new Date().getTime(),
     parse = x => JSON.parse(x),
+    decode = x => decodeURIComponent(x),
     encode = x => encodeURIComponent(x);
 
 function log(x) { 
@@ -25,7 +26,7 @@ function logToast(x) {
   this.java.log(x); 
   this.java.toast(x); 
 }
-function getLoginMap(x) { 
+function getLoginMapOf(x) { 
   try {
      return String(this.source.getLoginInfoMap().get(x)); 
   } catch {
