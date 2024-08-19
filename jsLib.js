@@ -29,11 +29,6 @@ function getLoginMap(x) {
   try {
      return String(this.source.getLoginInfoMap().get(x)); 
   } catch {
-     this.java.log("获取loginMap失败!");
      return '';
   }
 } 
-function getFnInnerStr(fn){
-  let str = fn.toString();
-  return str.substring(str.indexOf('{') + 1, str.lastIndexOf('}'));
-}
